@@ -53,8 +53,13 @@ int main(int argc, char ** argv){
       (*it_sum_img) += (float)(*it_img);
     }
     num_imgs++;
+    if(num_imgs % 1000){
+      cout << num_imgs << " images has been added." << endl;
+    }
   }
  
+  cout << "total number of images is " << num_imgs << endl;
+
   MatIterator_<float> it_sum_img = sum_img.begin<float>();
   MatIterator_<float> end = sum_img.end<float>();
   const float inum_imgs = 1.f / (float)num_imgs;
