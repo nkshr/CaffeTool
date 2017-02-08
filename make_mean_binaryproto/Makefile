@@ -1,21 +1,13 @@
 #!/bin/sh
 
-#Refer to
-#"caffe/build/examples/CMakeFiles/classification.dir/link.txt"
-#for lingking option
-#"caffe/build/examples/CMakeFiles/classification.dir/flags.make"
-#for compiler option
-#"caffe/build/examples/CMakeFiles/classification.dir/build.make"
-#for compile command
-
 DEBUG_SS = n
 TIME_SS = y
 
 SRCS = make_mean_binaryproto.cpp
 OBJS = $(addsuffix .o, $(basename $(SRCS)))
 
-CAFFE_INC_DIR = -I./caffe/include
-CAFFE_LIB_DIR = -L./caffe/lib
+CAFFE_INC_DIR = -I/home/mg6/caffe/build/install/include
+CAFFE_LIB_DIR = -L/home/mg6/caffe/build/lib
 CAFFE_LIB = -lcaffe
 
 OPENCV_INC_DIR = `pkg-config --cflags-only-I opencv`
@@ -34,7 +26,7 @@ GLOG_INC_DIR = -I./glog/include
 GLOG_LIB_DIR = -L./glog/lib 
 GLOG_LIB = -lglog
 
-CUBLAS_INC_DIR = -I/usr/local/cuda-6.5/targets/armv7-linux-gnueabihf/include/
+CUBLAS_INC_DIR = -I/usr/local/cuda-8.0/targets/x86_64-linux/include
 
 CXX = /usr/bin/c++
 
