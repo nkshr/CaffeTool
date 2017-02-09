@@ -78,9 +78,6 @@ int main(int argc, char ** argv){
     vector<pair<subsynset_checker*, int> >::iterator it = vec_sc.begin();
     while(true){
       if(it == vec_sc.end()){
-#ifdef DEBUG_AL
-	//cout << fname << " is omitted." << endl;
-#endif
 	flog << fname << " is omittetd." << endl;
 	break;
       }
